@@ -1,0 +1,40 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+	char str[201];
+	cin >> str;
+	int cap = 0, low = 0;
+	for (int i = 0; str[i] != '\0'; i++)
+	{
+		if (str[i] >= 65 && str[i] <= 90)
+		{
+			cap++;
+		}
+		else
+		{
+			low++;
+		}
+	}
+	//cout << cap << endl;
+
+	if (cap > low) {
+		for (int i = 0; str[i] != '\0'; i++)
+		{
+			if (str[i] >= 97 && str[i] <= 122)
+				str[i] = str[i] - 32;
+		}
+	}
+	else
+	{
+		for (int i = 0; str[i] != '\0'; i++)
+		{
+			if (str[i] >= 65 && str[i] <= 90)
+				str[i] = str[i] + 32;
+		}
+	}
+
+	cout << str << endl;
+	//printf("\n");
+	return 0;
+}
