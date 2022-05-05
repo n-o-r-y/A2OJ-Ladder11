@@ -1,0 +1,32 @@
+    #include<bits/stdc++.h>
+    using namespace std;
+    int main()
+    {
+    	//string str;
+    	char str[1001];
+    	cin >> str;
+    	int c = 0;
+    	int ln=strlen(str);
+        //cout<<ln<<endl;
+        sort(str,str+ln);
+    	for (int i = 0; i<ln; i++)
+    	{   
+    			if (str[i] != str[i+1])
+    			{
+    				c++;
+    				//cout << str[i] << endl;
+    			}
+    	}
+    	//cout << c << endl;
+       
+        if(c%2==0)
+        {
+        	printf("CHAT WITH HER!\n");
+        }
+        else
+        {
+        	printf("IGNORE HIM!\n");
+        }
+        
+        return 0;
+    }
